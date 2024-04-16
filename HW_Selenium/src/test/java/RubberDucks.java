@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.time.*;
 
@@ -17,7 +19,10 @@ public class RubberDucks {
 
         driver.findElement(By.xpath("//div[@id='site-menu-wrapper']//a" +
                 "[@href='https://litecart.stqa.ru/en/rubber-ducks-c-1/']")).click();
-        driver.findElement(By.cssSelector("h1.title"));
+
+        WebElement titleRubberDucks = driver.findElement(By.cssSelector("h1.title"));
+        Assert.assertEquals(true, titleRubberDucks.isDisplayed());
+
         driver.quit();
     }
 }

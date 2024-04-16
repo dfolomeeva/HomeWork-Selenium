@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.time.*;
 
@@ -30,7 +31,9 @@ public class Subcategory {
                         "a[@href='https://litecart.stqa.ru/en/rubber-ducks-c-1/" +
                         "subcategory-c-2/']")).click();
 
-        driver.findElement(By.xpath("//h1[@class='title']"));
+        WebElement titleSubcategory = driver.findElement(By.xpath("//h1[@class='title']"));
+        Assert.assertEquals(true, titleSubcategory.isDisplayed());
+
         driver.quit();
     }
 }

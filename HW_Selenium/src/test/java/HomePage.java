@@ -1,7 +1,11 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import java.time.*;
 
 public class HomePage {
@@ -16,7 +20,10 @@ public class HomePage {
         driver.get("https://litecart.stqa.ru/en/");
 
         driver.findElement(By.cssSelector(".fa.fa-home")).click();
-        driver.findElement(By.cssSelector("#rslides1_s0"));
+
+        WebElement bigPicture = driver.findElement(By.cssSelector("#rslides1_s0"));
+        Assert.assertEquals(true, bigPicture.isDisplayed());
+
         driver.quit();
     }
 }
