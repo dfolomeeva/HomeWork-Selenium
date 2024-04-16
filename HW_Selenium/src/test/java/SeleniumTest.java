@@ -12,7 +12,7 @@ public class SeleniumTest {
         driver.get("https://the-internet.herokuapp.com/");
 
         List<WebElement> links = driver.findElements(By.tagName("a"));
-        for (WebElement link: links) {
+        for (WebElement link : links) {
             System.out.println(link.getText());
         }
         driver.findElement(By.linkText("Drag and Drop")).click();
