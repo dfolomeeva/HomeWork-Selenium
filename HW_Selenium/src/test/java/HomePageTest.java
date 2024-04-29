@@ -4,11 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.time.*;
 
-public class HomePage {
+public class HomePageTest {
 
     @Test
     public void homePage() {
@@ -22,7 +21,7 @@ public class HomePage {
         driver.findElement(By.cssSelector(".fa.fa-home")).click();
 
         WebElement bigPicture = driver.findElement(By.cssSelector("#rslides1_s0"));
-        Assert.assertEquals(true, bigPicture.isDisplayed());
+        Assert.assertTrue(bigPicture.isDisplayed());
 
         driver.quit();
     }

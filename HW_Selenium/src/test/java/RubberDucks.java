@@ -20,8 +20,14 @@ public class RubberDucks {
         driver.findElement(By.xpath("//div[@id='site-menu-wrapper']//a" +
                 "[@href='https://litecart.stqa.ru/en/rubber-ducks-c-1/']")).click();
 
+        String expectedTitle = "Rubber Ducks";
+
         WebElement titleRubberDucks = driver.findElement(By.cssSelector("h1.title"));
-        Assert.assertEquals(true, titleRubberDucks.isDisplayed());
+
+        String titleRubberDucksText = titleRubberDucks.getText();
+        Assert.assertEquals(titleRubberDucksText, expectedTitle);
+        titleRubberDucks.isDisplayed();
+
 
         driver.quit();
     }
