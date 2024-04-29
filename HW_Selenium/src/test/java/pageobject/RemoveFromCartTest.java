@@ -1,27 +1,13 @@
 package pageobject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import java.time.Duration;
 
-public class RemoveFromCartTest {
-    private WebDriver driver;
-
-    @BeforeMethod
-    public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.get("https://litecart.stqa.ru/en/");
-    }
+public class RemoveFromCartTest extends TestBase {
 
     @Test
     public void removeFromCartTest() {
@@ -45,7 +31,5 @@ public class RemoveFromCartTest {
         wait.until(ExpectedConditions.textToBe(By.cssSelector("span.quantity"),"0"));
         softAssert.assertEquals(cart.getQuantityInBasket(),"0");
 
-
-        driver.quit();
     }
 }

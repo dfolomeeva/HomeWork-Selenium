@@ -1,25 +1,9 @@
 package pageobject;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import java.time.Duration;
 
-
-public class IncorrectLoginTest {
+public class IncorrectLoginTest extends TestBase {
     public static final String LIGHT_PINK = "rgba(255, 204, 204, 1)";
-    private WebDriver driver;
-
-    @BeforeMethod
-    public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.get("https://litecart.stqa.ru/en/");
-    }
 
     @Test
     public void incorrectLoginTest() {
@@ -36,7 +20,5 @@ public class IncorrectLoginTest {
         softAssert.assertTrue(homePage.errorMessageIsVisible(), "Error message is not visible");
 
         softAssert.assertAll();
-
-        driver.quit();
     }
 }
