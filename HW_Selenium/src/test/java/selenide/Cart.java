@@ -7,12 +7,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Cart {
 
-  //  private static By quantityInBasketLocator = By.cssSelector("span.quantity");
-    private static final By noItemsTextLocator = By.xpath("//div[@id='checkout-cart-wrapper']");
- //   public String getQuantityInBasket(){return $(quantityInBasketLocator).getText();
- //   }
-//    public String getNoItemsText(){return $(noItemsTextLocator).getText();
- //   }
+      private static final By noItemsTextLocator = By.xpath("//div[@id='checkout-cart-wrapper']");
+
     public static void validateNoItemText (String expectedNoItemText) {
         Configuration.assertionMode = AssertionMode.SOFT;
         $(noItemsTextLocator).shouldHave(text(expectedNoItemText));
