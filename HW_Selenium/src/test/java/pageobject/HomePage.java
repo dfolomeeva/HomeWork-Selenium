@@ -9,9 +9,13 @@ public class HomePage {
 
     private WebDriver driver;
 
-    public HomePage (WebDriver driver) {
+    public HomePage () {
         this.driver = driver;
     }
+
+    public static void validateErrorMessage(String expectedErrorMessageText, String lightPink) {
+    }
+
     public String getErrorMessageText() {
         return driver.findElement(errorMessageLocator).getText();
 

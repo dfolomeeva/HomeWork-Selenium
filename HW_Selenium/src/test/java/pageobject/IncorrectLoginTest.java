@@ -8,8 +8,8 @@ public class IncorrectLoginTest extends TestBase {
     @Test
     public void incorrectLoginTest() {
         String expectedErrorMessageText = "Wrong password or the account is disabled, or does not exist";
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage();
+        HomePage homePage = new HomePage();
 
         loginPage.attemptLogin("d.folomeeva1987@gmail.com", "12345");
 

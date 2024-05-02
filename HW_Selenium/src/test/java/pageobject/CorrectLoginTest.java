@@ -7,8 +7,8 @@ public class CorrectLoginTest extends TestBase {
     @Test
     public void correctLoginTest() {
         String expectedSuccessMessageText = "You are now logged in as Daria Folomeeva.";
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage();
+        HomePage homePage = new HomePage();
 
         loginPage.attemptLogin("d.folomeeva1987@gmail.com", "QWERTY");
 
