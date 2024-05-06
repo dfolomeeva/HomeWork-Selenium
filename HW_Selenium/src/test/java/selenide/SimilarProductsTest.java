@@ -1,20 +1,15 @@
 package selenide;
-import org.openqa.selenium.By;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 
 public class SimilarProductsTest extends TestBase {
 
+    @Description("All other ducks are in category Similar products when choose one duck")
+    @Story("Similar products")
     @Test
     public void similarProductsTest() {
-        $(By.cssSelector("#box-most-popular [alt='Green Duck']")).click();
-
-        $(By.cssSelector("#box-similar-products [alt='Yellow Duck']")).shouldBe(visible);
-        $(By.cssSelector("#box-similar-products [alt='Red Duck']")).shouldBe(visible);
-        $(By.cssSelector("#box-similar-products [alt='Blue Duck']")).shouldBe(visible);
-        $(By.cssSelector("#box-similar-products [alt='Purple Duck']")).shouldBe(visible);
-
+        Catalog.addGreenDuck();
+        Catalog.checkOtherDucks();
     }
 }
