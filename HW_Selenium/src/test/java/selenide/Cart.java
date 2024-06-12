@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
-
 public class Cart {
 
       private static final By noItemsTextLocator = By.xpath("//div[@id='checkout-cart-wrapper']");

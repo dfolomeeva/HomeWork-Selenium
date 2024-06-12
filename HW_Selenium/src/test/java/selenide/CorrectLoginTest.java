@@ -12,6 +12,5 @@ public class CorrectLoginTest extends TestBase {
 
         LoginPage.attemptLogin("d.folomeeva1987@gmail.com", "QWERTY");
         HomePage.validateSuccessMessage(expectedSuccessMessageText, LIGHT_GREEN);
-
     }
 }

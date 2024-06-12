@@ -11,7 +11,6 @@ public class HomePage {
     private static final By errorMessageLocator = By.cssSelector(".notice.errors");
     private static final By successMessageLocator = By.cssSelector(".notice.success");
 
-
     public static void validateErrorMessage(String expectedErrorMessageText, String bgColor) {
         Configuration.assertionMode = AssertionMode.SOFT;
         $(errorMessageLocator).shouldHave(text(expectedErrorMessageText));

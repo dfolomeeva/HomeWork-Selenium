@@ -8,12 +8,12 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 
-//@Epic("Selenium add")
-//@Feature("AddToCart")
+@Epic("Selenium add")
+@Feature("AddToCart")
 public class AddToCartTest extends TestBase {
 
- //   @Description("Quantity of ducks in cart changes when duck is added to cart")
-  //  @Story("Add to cart")
+    @Description("Quantity of ducks in cart changes when duck is added to cart")
+    @Story("Add to cart")
     @Test
 
     public void addToCartTest() {

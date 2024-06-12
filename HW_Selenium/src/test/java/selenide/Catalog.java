@@ -2,7 +2,6 @@ package selenide;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-
 public class Catalog {
     public static By greenDuckLocator = By.cssSelector("#box-most-popular [alt='Green Duck']");
     public static By yellowDuckLocator = By.cssSelector("#box-similar-products [alt='Yellow Duck']");

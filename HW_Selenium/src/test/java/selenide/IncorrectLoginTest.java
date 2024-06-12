@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 @Listeners({ SoftAsserts.class})
 public class IncorrectLoginTest extends TestBase {
     public static final String LIGHT_PINK = "rgba(255, 204, 204, 1)";
-
     @Test
     public void incorrectLoginTest() {
         String expectedErrorMessageText = "Wrong password or the account is disabled, or does not exist";
