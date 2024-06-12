@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Listeners({ SoftAsserts.class})
 public class TestBase {
-
     @BeforeMethod
     protected void setup() {
         Configuration.browser = CHROME;

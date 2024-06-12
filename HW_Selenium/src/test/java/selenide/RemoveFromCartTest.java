@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class RemoveFromCartTest extends TestBase {
     String expectedNoItemText = "There are no items in your cart.";
-
     @Description("Quantity of ducks in cart changes when duck is removed from cart")
     @Story("Remove from cart")
     @Test
